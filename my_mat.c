@@ -33,11 +33,11 @@ void floydWarshall (int mat[][SIZE])
            for (i = 0; i < SIZE; i++){
                 for (j = 0; j < SIZE; j++){
                     
-                    if(floydmat[i][k]==0 || floydmat[k][j]==0)
+                    if(floydmat[i][k]==0 || floydmat[k][j]==0 || i==j)
                     continue;
                     
                     if(floydmat[i][j]==0){
-                    floydmat[i][j]=floydmat[i][k]+floydmat[k][j];
+                    floydmat[i][j]=(floydmat[i][k]+floydmat[k][j]);
                     continue;
                     }
                     
